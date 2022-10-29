@@ -10,6 +10,9 @@ Dhafin Almas Nusantara - 5025201064
 
 **WISE akan dijadikan sebagai DNS Master**, **Berlint akan dijadikan DNS Slave**, dan **Eden akan digunakan sebagai Web Server**. **Terdapat 2 Client yaitu SSS, dan Garden**. Semua node terhubung pada router Ostania, sehingga dapat mengakses internet
 
+**Topologi**
+![](./topologi.jpg)
+
 **Setting IP addres**
 
 - Ostania
@@ -332,4 +335,17 @@ Setelah itu, Loid juga membutuhkan agar url www.wise.yyy.com/index.php/home dapa
 
 ```shell
    Alias "/home" "/var/www/wise.E14.com/index.php/home"
+```
+
+- Reload
+
+```shell
+a2ensite wise.E14.com
+service apache2 reload
+```
+
+- Test web server
+
+```shell
+lynx wise.E14.com/home
 ```
